@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+nginx:
+  image: nginx:latest
+  volumes:
+    -'./nginx/default.conf:/etc/nginx.conf'
