@@ -1,7 +1,24 @@
 version: "3"
-
 services:
-nginx:
-  image: nginx:latest
-  volumes:
-    -'./nginx/default.conf:/etc/nginx.conf'
+  nginx:
+    image: nginx:latest
+    volumes:
+      - './nginx/default.conf:/etc/nginx.conf'
+    ports:
+      - '8080:80'
+  app1:
+    image: node
+    environment:
+      - APPID=1111
+  app2:
+    image: node
+    environment:
+      - APPID=2222
+  app3:
+    image: node
+    environment:
+      - APPID=3333
+  app4:
+    image: node
+    environment:
+      - APPID=4444
